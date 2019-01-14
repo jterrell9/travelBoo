@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Travel Boo - Travel with us as your boo</title>
+    <link href="forms.css" rel="stylesheet" type="text/css" />
+    <link href="mainStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="titlebar">
+    <table>
+        <tr>
+            <td id="logo">
+                <div id="shape1" class="logo"></div>
+                <div id="shape2" class="logo"></div>
+                <div id="shape3" class="logo"></div>
+                <div id="shape4" class="logo"></div>
+            </td>
+            <td id="title">
+                <img src="img/title.png" alt="title" height="100px"/>
+            </td>
+            <td id="menu">
+                <img src="img/menuList.png" id="menuButton" class="menuBtn" alt="menu" />
+            </td>
+        </tr>
+    </table>
+    <div id="travelBoo"><img src="img/travelBoo.png" id="travelBooImg" alt="travel boo" /></div>
+    <div id="dropdown">
+        <span class="menu"><a href="login.html">Login</a></span><br />
+        <span class="menu"><a href="travel.html">Travel</a></span><br />
+        <span class="menu"><a href="cart.html">View Cart</a></span><br />
+        <span class="menu"><a href="profile.html">Profile</a></span><br />
+        <span class="menu"><a href="register.html">Register</a></span><br />
+    </div>
+</div>
+<div id="spacer"></div>
+
+<div id="statusBar">
+    <table width="1200px">
+        <tr id="statusText">
+            <td id="greeting">
+                Welcome new customer!
+            </td>
+            <td id="statusLinks" nowrap="nowrap"><a href="login.html" class="statusBarLinks">Login</a> | <a href="register.html" class="statusBarLinks">Register</a></td>
+        </tr>
+    </table>
+</div>
+
+<div style="position: absolute; top: 250px; left: 125px;">
+    Invalid Form
+</div>
+
+<script>
+    document.getElementById('menuButton').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('menuButton').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+    document.getElementById('dropdown').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('dropdown').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+</script>
+
+</body>
+</html>

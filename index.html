@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Travel Boo - Travel with us as your boo</title>
+    <style>
+        #imageChanger{
+            position: absolute;
+            left: 50px;
+            top: 175px;
+            width: 800px;
+            height: 400px;
+            background-color: #CBE7FF;
+            margin-top: 100px;
+        }
+        #imageChanger img{
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            width: 800px;
+            height: 400px;
+            border: 2px solid #61a5f8;
+            border-radius: 10px;
+            box-shadow: 3px 3px 20px black;
+        }
+    </style>
+    <link href="mainStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="titlebar">
+    <table>
+        <tr>
+            <td id="logo">
+                <div id="shape1" class="logo"></div>
+                <div id="shape2" class="logo"></div>
+                <div id="shape3" class="logo"></div>
+                <div id="shape4" class="logo"></div>
+            </td>
+            <td id="title">
+                <img src="img/title.png" alt="title" height="100px"/>
+            </td>
+            <td id="menu">
+                <img src="img/menuList.png" id="menuButton" class="menuBtn" alt="menu" />
+            </td>
+        </tr>
+    </table>
+    <div id="travelBoo"><img src="img/travelBoo.png" id="travelBooImg" alt="travel boo" /></div>
+    <div id="dropdown">
+        <span class="menu"><a href="login.html">Login</a></span><br />
+        <span class="menu"><a href="travel.html">Travel</a></span><br />
+        <span class="menu"><a href="cart.html">View Cart</a></span><br />
+        <span class="menu"><a href="profile.html">Profile</a></span><br />
+        <span class="menu"><a href="register.html">Register</a></span><br />
+    </div>
+</div>
+<div id="spacer"></div>
+
+<div id="statusBar">
+    <table width="1200px">
+        <tr id="statusText">
+            <td id="greeting">
+                Welcome to Travel Boo!
+            </td>
+            <td id="statusLinks" nowrap="nowrap"><a href="login.html" class="statusBarLinks">Login</a> | <a href="register.html" class="statusBarLinks">Register</a></td>
+        </tr>
+    </table>
+</div>
+
+<div id="imageChanger">
+    <img id="bottom" src="" />
+    <img id="top" src="" />
+</div>
+
+
+<script>
+    document.getElementById('menuButton').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('menuButton').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+    document.getElementById('dropdown').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('dropdown').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+</script>
+<script>
+    let i = 0;
+    let images = ["img/airplane_text.jpg", "img/airplane.jpg", "img/car.jpg", "img/beach.jpg"];
+    document.getElementById("top").src = images[i];
+    setInterval(function(){
+        if(i === images.length){
+            i = 0;
+        }
+        document.getElementById("top").src = images[i];
+        i++;
+    }, 2500);
+</script>
+
+</body>
+</html>

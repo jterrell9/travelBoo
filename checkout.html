@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Travel Boo - Travel with us as your boo</title>
+    <link href="forms.css" rel="stylesheet" type="text/css" />
+    <link href="mainStyle.css" rel="stylesheet" type="text/css" />
+    <script>
+        if (location.protocol !== 'https:')
+        {
+            location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    </script>
+</head>
+<body>
+<div id="titlebar">
+    <table>
+        <tr>
+            <td id="logo">
+                <div id="shape1" class="logo"></div>
+                <div id="shape2" class="logo"></div>
+                <div id="shape3" class="logo"></div>
+                <div id="shape4" class="logo"></div>
+            </td>
+            <td id="title">
+                <img src="img/title.png" alt="title" height="100px"/>
+            </td>
+            <td id="menu">
+                <img src="img/menuList.png" id="menuButton" class="menuBtn" alt="menu" />
+            </td>
+        </tr>
+    </table>
+    <div id="travelBoo"><img src="img/travelBoo.png" id="travelBooImg" alt="travel boo" /></div>
+    <div id="dropdown">
+        <span class="menu"><a href="login.html">Login</a></span><br />
+        <span class="menu"><a href="travel.html">Travel</a></span><br />
+        <span class="menu"><a href="cart.html">View Cart</a></span><br />
+        <span class="menu"><a href="profile.html">Profile</a></span><br />
+        <span class="menu"><a href="register.html">Register</a></span><br />
+    </div>
+</div>
+<div id="spacer"></div>
+
+<div id="statusBar">
+    <table width="1200px">
+        <tr id="statusText">
+            <td id="greeting">
+                Welcome to Travel Boo!
+            </td>
+            <td id="statusLinks" nowrap="nowrap"><a href="login.html" class="statusBarLinks">Login</a> | <a href="register.html" class="statusBarLinks">Register</a></td>
+        </tr>
+    </table>
+</div>
+
+<div class="container-fluid" style="position: absolute; top: 300px; left: 75px;">
+    <form>
+        <label>Name</label>
+        <input type="text" class="form">
+
+        <label>CVV</label>
+        <input type="text" class="form" >
+
+        <label>Card Number</label>
+        <input type="text" class="form">
+
+        <div class="formGroup">
+            <label>Expiration Date</label>
+            <select>
+                <option value="01">January</option>
+                <option value="02">February </option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select>
+                <option value="18"> 2018</option>
+                <option value="19"> 2019</option>
+                <option value="20"> 2020</option>
+                <option value="21"> 2021</option>
+            </select>
+        </div>
+
+        <button type="submit" id="submitBtn">Confirm</button>
+
+    </form>
+</div>
+
+
+<script>
+    document.getElementById('menuButton').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('menuButton').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+    document.getElementById('dropdown').onmouseover = function(){
+        document.getElementById('dropdown').style.display = "inline-block";
+    };
+    document.getElementById('dropdown').onmouseout = function(){
+        document.getElementById('dropdown').style.display = "none";
+    };
+</script>
+<script>
+    let i = 0;
+    let images = ["img/airplane_text.jpg", "img/airplane.jpg", "img/car.jpg", "img/beach.jpg"];
+    document.getElementById("top").src = images[i];
+    setInterval(function(){
+        if(i === images.length){
+            i = 0;
+        }
+        document.getElementById("top").src = images[i];
+        i++;
+    }, 2500);
+</script>
+
+</body>
+</html>

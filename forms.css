@@ -1,0 +1,39 @@
+#formContainer{
+    position: absolute;
+    top: 250px;
+    left: 125px;
+}
+caption{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+td.form{
+    text-align: right;
+    padding: 5px;
+}
+input.form{
+    width: 200px;
+    font-size: 18px;
+    border: 2px solid #666BFF;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+input.form:focus{
+    border: 2px solid #800000;
+}
+input.form:active{
+    outline: none;
+}
+button#submitBtn{
+    font-family: Geneva;
+    color: white;
+    font-size: 18px;
+    background: linear-gradient(#191b34, #CCCCCC);
+    border: 2px solid #666BFF;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+button#submitBtn:hover{
+    border: 2px solid white;
+}
